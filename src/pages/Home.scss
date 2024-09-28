@@ -3,7 +3,6 @@
 @use '@carbon/react/scss/breakpoint' as *;
 @use '@carbon/react/scss/type' as *;
 
-
 //hero section
 .home-page {
   .intro-section {
@@ -43,7 +42,9 @@
     min-height: 200px; 
 
     &:hover {
-      background-color: $layer-01;
+      h3 {
+        color: $link-primary;
+      }
     }
 
 
@@ -88,12 +89,18 @@
     }
 
     p {
-      @include type-style('body-long-01');
+      @include type-style('body-compact-02');
       margin-bottom: $spacing-06;
     }
   }
 
   //project section
+
+  .mkt-project,
+  .des-dev-project {
+    padding-top: $spacing-06;
+  }
+
   .des-header {
     margin: $spacing-07 0;
   }
@@ -102,4 +109,72 @@
     margin: $spacing-09 0;
   }
 
+}
+
+// gallery section
+.gallery-section {
+  margin-bottom: $spacing-09;
+  padding-top: $spacing-09;
+}
+
+.gallery-text {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-07 $spacing-05;
+  background-color: $field-01;
+}
+
+.g-link {
+  justify-self: end;
+  align-self: flex-end;
+}
+
+.g-headline {
+  margin-bottom: $spacing-07;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0; // 移除与上方文字块的间距
+}
+
+.gallery-item {
+  position: relative;
+  padding: 0; // 移除内部间距
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 50%; // 2:1 比例
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.gallery-item-large {
+  width: 62.5%; // 10/16
+}
+
+.gallery-item-small {
+  width: 37.5%; // 6/16
+}
+
+@media (max-width: 1056px) {
+  .gallery-item {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 672px) {
+  .gallery-item {
+    width: 100% !important;
+  }
 }

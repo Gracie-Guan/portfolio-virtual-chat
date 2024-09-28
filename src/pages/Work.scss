@@ -1,0 +1,32 @@
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.work-page {
+  padding: $spacing-07 0;
+
+  section {
+    margin-bottom: $spacing-09;
+  }
+
+  h1 {
+    @include type-style('productive-heading-07');
+    margin-bottom: $spacing-09;
+    color: $link-primary;
+  }
+}
+
+.work-breadcrumb {
+  margin-bottom: $spacing-09;
+  margin-left: $spacing-07;
+  }
+
+
+.design-dev-section,
+.marketing-section {
+  .cds--grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

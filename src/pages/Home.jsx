@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Column, Link } from '@carbon/react';
+import { Grid, Column, Link, AspectRatio } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
 import './Home.scss';
 import colorlogo from '../assets/img/colorlogo.png';
@@ -9,10 +9,19 @@ import agile from '../assets/img/Fast.png';
 import collab from '../assets/img/Collaborate-with-teams.png'
 import ProjectCardA from '../components/ProjectCard/ProjectCardA';
 import ProjectCardB from '../components/ProjectCard/ProjectCardB'
+import styled from 'styled-components';
 
 import nomNomImage from '../assets/img/Nomnom-1.png';
 
 import marketResearchImage from '../assets/img/MarketResearch.jpg';
+import gallerypic1 from '../assets/img/computer_desk.jpg';
+import gallerypic2 from '../assets/img/cystal_ball.jpg';
+import gallerypic3 from '../assets/img/3Dmodel.png';
+import gallerypic4 from '../assets/img/data_visual.jpg';
+
+const StyledGrid = styled(Grid)`
+  --cds-grid-gutter: 0; 
+`;
 
 const Home = () => {
   return (
@@ -124,7 +133,7 @@ const Home = () => {
           </Column>
         </Grid>
 
-        <Grid condensed className='des-cards'>
+        <StyledGrid condensed className='des-cards'>
           <ProjectCardB
             title="Market Research for R&D"
             description="market research for electric scooter products, conducted in-depth user and distributor interviews, and formulated firsthand market insight and analysis for the R&D department."
@@ -152,7 +161,39 @@ const Home = () => {
             link="/projects/market-research"
             imageSrc={marketResearchImage}
           />
+        </StyledGrid>
+      </section>
+
+      {/*  gallery section */}
+      <section className='gallery-section'>
+        <Grid className='gallery-text'>
+          <Column lg={8} md={6} sm={4} className='g-text'>
+            <h1 className='g-headline'>Gallery</h1>
+            <p>
+              Welcome to my visual playground - Here, pixels meet polygons, and code brings imagination to life. From smooth 3D shapes to eye-catching computer graphics, each piece shows how creativity and code can work hand in hand.
+            </p>
+          </Column>
+          <Column lg={8} md={6} sm={4} className='g-link'>
+            <Link href="#" renderIcon={ArrowRight}>
+              View More
+            </Link>
+          </Column>
         </Grid>
+
+        <div className='gallery-grid'>
+          <div className="gallery-item gallery-item-large">
+            <img src={gallerypic1} alt="Gallery item 1" />
+          </div>
+          <div className="gallery-item gallery-item-small">
+            <img src={gallerypic2} alt="Gallery item 2" />
+          </div>
+          <div className="gallery-item gallery-item-small">
+            <img src={gallerypic3} alt="Gallery item 3" />
+          </div>
+          <div className="gallery-item gallery-item-large">
+            <img src={gallerypic4} alt="Gallery item 4" />
+          </div>
+        </div>
       </section>
 
     </div>

@@ -1,0 +1,73 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.journey-section {
+  padding: $spacing-05 0;
+
+  h1 {
+    @include type-style('productive-heading-07');
+    padding-bottom: $spacing-11;
+    margin-left: $spacing-07;
+  }
+
+  .journey-grid {
+    margin-bottom: $spacing-07;
+  }
+
+  .journey-tile {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .journey-image {
+      width: 100%;
+      padding-top: 75%; // 4:3 aspect ratio
+      position: relative;
+      overflow: hidden;
+      margin-bottom: $spacing-05;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    h3 {
+      @include type-style('productive-heading-03');
+      margin-bottom: $spacing-03;
+    }
+
+    p {
+      @include type-style('body-long-01');
+    }
+  }
+
+  .journey-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-05;
+
+    .nav-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: $spacing-03;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
+        background-color: $link-primary;
+      }
+    }
+  }
+}

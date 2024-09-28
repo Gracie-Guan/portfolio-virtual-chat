@@ -2,10 +2,15 @@ import React from 'react';
 import { ClickableTile, Column } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
 import './ProjectCardB.scss';
+import styled from 'styled-components';
+
+const StyledColumn = styled(Column)`
+  padding: 0; 
+`;
 
 const ProjectCardB = ({ title, description, link, imageSrc }) => {
   return (
-    <Column sm={2} md={4} lg={4} >
+    <StyledColumn sm={2} md={4} lg={4} >
     <ClickableTile
       className="project-card-b"
       href={link}
@@ -21,7 +26,7 @@ const ProjectCardB = ({ title, description, link, imageSrc }) => {
         <img src={imageSrc} alt={title} className="project-card-b__image" />
       </div>
     </ClickableTile>
-    </Column>
+    </StyledColumn>
   );
 };
 

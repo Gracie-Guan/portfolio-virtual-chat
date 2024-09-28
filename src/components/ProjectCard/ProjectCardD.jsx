@@ -1,9 +1,10 @@
 import React from 'react';
-import { Column, AspectRatio, Tag } from '@carbon/react';
+import { Column, Tag } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
-import './ProjectCardA.scss';
+import './ProjectCardD.scss';
+import { AspectRatio } from 'carbon-components-react';
 
-const ProjectCardA = ({ title, description, imageSrc, link, tags, icon }) => {
+const ProjectCardD = ({ title, description, imageSrc, link, tags }) => {
   return (
     <Column sm={4} md={4} lg={8} className="project-card">
       <a href={link} className="project-card__link">
@@ -24,20 +25,20 @@ const ProjectCardA = ({ title, description, imageSrc, link, tags, icon }) => {
               <ArrowRight size={16} />
             </div>
           </div>
-          <div className="project-card__image-container">
-            <Column sm={4} md={4} lg={5}>
+          {/* <div className="project-card__image-container"> */}
+            <AspectRatio ratio="1x1" className="project-card__image-container_d" >
               <img src={imageSrc} alt={title} className="project-card__image" />
-            </Column>
-          </div>
-          {icon && <img src={icon} alt="Project icon" className="project-card__icon" />}
+            </AspectRatio>
+          {/* </div> */}
+
         </div>
       </a>
     </Column>
   );
 };
 
-ProjectCardA.defaultProps = {
+ProjectCardD.defaultProps = {
   tags: [],
 };
 
-export default ProjectCardA;
+export default ProjectCardD;

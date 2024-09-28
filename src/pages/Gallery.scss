@@ -1,0 +1,102 @@
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.gallery-page {
+  margin-top: $spacing-07;
+
+  .cds--breadcrumb {
+    margin-bottom: $spacing-05;
+    margin-left: $spacing-13;
+  }
+
+  .gallery-content {
+    display: flex;
+  }
+
+  .side-nav-column {
+    position: relative;
+  }
+
+  .nav-toggle-button {
+    position: fixed;
+    top: $spacing-09; // Adjust based on your header height
+    left: $spacing-05;
+    z-index: 1000;
+  }
+
+  .gallery-nav {
+    position: fixed;
+    top: $spacing-12; // Adjust based on your header height
+    left: $spacing-07;
+    height: 50vh;
+    width: 12.5%; 
+    background-color: $layer-02;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 999;
+
+    @include breakpoint-down(md) {
+      transform: translateX(-100%);
+      width: 100%;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    .document-toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .document-toc-item {
+      margin: 0;
+      padding: 0;
+      border-left: 3px solid transparent;
+      transition: border-color 0.2s ease;
+
+      &.active {
+        border-left-color: $link-primary; 
+      }
+    }
+
+    .document-toc-link {
+      display: block;
+      padding: $spacing-04 $spacing-05;
+      color: $text-primary;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background-color: $layer-01;
+        color: $text-primary;
+      }
+    }
+
+    .document-toc-item.active .document-toc-link {
+      color: $text-primary;
+      font-weight: 600;
+    }
+  }
+
+  .gallery-main-content {
+    margin-left: 12.5%; 
+
+    @include breakpoint-down(md) {
+      margin-left: 0;
+    }
+
+    section {
+      margin-bottom: $spacing-09;
+    }
+  }
+
+  @include breakpoint(md) {
+    .nav-toggle-button {
+      display: none;
+    }
+  }
+}
