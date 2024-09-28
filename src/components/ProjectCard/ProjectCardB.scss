@@ -1,0 +1,54 @@
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+
+.project-card-b {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: -1px !important;
+  padding: 0 !important; 
+  background-color: $layer-02 !important;
+  border: 1px solid $border-subtle-02 !important;
+
+  &:hover {
+    background-color: $layer-01 !important;
+  }
+
+  &__content {
+    padding: $spacing-05;
+    flex-grow: 1;
+
+    h3 {
+      @include type-style('productive-heading-03');
+      margin-bottom: $spacing-03;
+    }
+
+    p {
+      @include type-style('body-long-01');
+    }
+  }
+
+  &__footer {
+    padding: $spacing-05;
+    display: flex;
+    color: $link-primary;
+    justify-content: flex-start;
+  }
+
+  &__image-container {
+    height: 0;
+    padding-bottom: 50%; 
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

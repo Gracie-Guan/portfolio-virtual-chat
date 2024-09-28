@@ -1,0 +1,70 @@
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.custom-footer {
+  background-color: $background-inverse;
+  color: $text-on-color;
+  padding: $spacing-07 0;
+
+  .custom-grid {
+    max-width: 1584px; // Carbon's max width
+    margin: 0 32;
+    padding: 0 $spacing-07;
+
+    @include breakpoint(sm) {
+      padding: 0 $spacing-05;
+    }
+  }
+
+  .logo {
+    height: 100px;
+    width: auto;
+    // margin-top: 32px;
+    margin-left: 16px;
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-left: 128px;
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+
+      li {
+        margin-right: $spacing-07;
+
+        a {
+          color: $text-on-color;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    a {
+      color: $text-on-color;
+      margin-left: $spacing-07;
+    }
+  }
+
+  .copyright {
+    margin-top: $spacing-05;
+    text-align: right;
+    font-size: 16;
+    @include type-style('label-01');
+  }
+}
