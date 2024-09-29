@@ -27,7 +27,7 @@ const ProjectCardC = ({ type, title, description, imageSrc, link, tags }) => {
             </div>
             <Button 
             className='project-card-c__btn'
-            href='#' 
+            href={link} 
             renderIcon={ArrowRight}
             iconDescription="View Case Study">
               View Case Study
