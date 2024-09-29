@@ -27,7 +27,7 @@ function MyHeader() {
     };
 
     const handleGithubClick = () => {
-      window.location.href = '';
+      window.open('https://www.linkedin.com/in/gracie-guan/', '_blank');
     }
 
   return (<HeaderContainer render={({
@@ -52,7 +52,7 @@ function MyHeader() {
               <HeaderGlobalAction aria-label="Email" onClick={handleEmailClick}>
                 <Email size={20} />
               </HeaderGlobalAction>
-              <HeaderGlobalAction aria-label="Email" onClick={handleGithubClick}>
+              <HeaderGlobalAction aria-label="Github" onClick={handleGithubClick}>
                 <LogoGithub size={20} />
               </HeaderGlobalAction>
             </HeaderGlobalBar>

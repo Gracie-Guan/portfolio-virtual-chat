@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, Column, Link, Breadcrumb, BreadcrumbItem } from '@carbon/react';
-import { ArrowRight } from '@carbon/icons-react';
+import { Grid, Column, Breadcrumb, BreadcrumbItem } from '@carbon/react';
+
 import ProjectCardD from '../components/ProjectCard/ProjectCardD';
 import ProjectCardC from '../components/ProjectCard/ProjectCardC';
 import './Work.scss';
@@ -14,7 +14,7 @@ const Work = () => {
     <div className="work-page">
       <Breadcrumb noTrailingSlash className='work-breadcrumb'>
         <BreadcrumbItem>
-          <a href="/#">Home</a>
+          <a href="/">Home</a>
         </BreadcrumbItem>
         <BreadcrumbItem isCurrentPage>Work</BreadcrumbItem>
       </Breadcrumb>
@@ -31,7 +31,7 @@ const Work = () => {
             title="NOMNOM Mobile App"
             description="A mobile application that addresses common frustrations in finding accurate food information by converting user-uploaded menu photos into accessible, text-based formats using AI."
             imageSrc={nomNomImage}
-            link="/projects/nomnom"
+            link="/nomnom"
             tags={['UX Design', 'Frontend', 'React Native', 'Google Cloud', 'Gemini AI']}
           />
           <ProjectCardC
@@ -39,7 +39,7 @@ const Work = () => {
             title="TCD Renters Network"
             description="A centralised website to coordinate campaigns around issues faced by the collective student renter community at Trinity College Dublin."
             imageSrc={tcdRentersImage}
-            link="/projects/tcd-renters"
+            link="/tcdrenters"
             tags={['UX Design', 'Frontend', 'Vue.js']}
           />
         </Grid>

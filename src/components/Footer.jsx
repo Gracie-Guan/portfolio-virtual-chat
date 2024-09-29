@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Column } from '@carbon/react';
-import { LogoLinkedin, Email } from '@carbon/icons-react';
+import { LogoLinkedin, Email, LogoGithub } from '@carbon/icons-react';
 import './Footer.scss';
 import logo from '../assets/img/logo_white.svg'
 
@@ -30,6 +30,9 @@ const Footer = () => {
             </a>
             <a href="mailto:gracie.yy.guan@gmail.com">
               <Email size={20} />
+            </a>
+            <a href="https://github.com/Gracie-Guan/">
+              <LogoGithub size={20} />
             </a>
           </div>
           <p className="copyright">
