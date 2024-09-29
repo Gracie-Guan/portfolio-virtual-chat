@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Column, Tile, PaginationNav } from '@carbon/react';
-import { ArrowLeft, ArrowRight } from '@carbon/icons-react';
 import './Carousel.scss';
 
 const journeyItems = [
@@ -39,7 +38,7 @@ const journeyItems = [
 const Carousel = () => {
   const itemsPerPage = 4;
   const totalItems = journeyItems.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage) + 1;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
   
   const [currentPage, setCurrentPage] = useState(1);
   const [displayedItems, setDisplayedItems] = useState([]);
@@ -58,11 +57,11 @@ const Carousel = () => {
 
   return (
     <section className="journey-section">
-      <h1>Journey</h1>
+      <h2>Journey</h2>
       <Grid narrow className="journey-grid">
         {displayedItems.map((item, index) => (
           <Column sm={4} md={2} lg={4} key={index}>
-            <Tile className="journey-tile">
+            <Tile className={`journey-tile ${index === 0 && currentPage === 1 ? 'journey-tile--highlighted' : ''}`}>
               {item.image && (
                 <div className="journey-image">
                   <img src={item.image} alt={item.title} />
@@ -76,9 +75,9 @@ const Carousel = () => {
       </Grid>
       <div className="journey-navigation">
         <PaginationNav 
-          itemsShown={4}
-          totalItems={totalPages}
-          page={currentPage-1}
+          itemsShown={5}
+          totalItems={totalPages+1}
+          page={currentPage}
           onChange={handlePageChange}
         />
       </div>

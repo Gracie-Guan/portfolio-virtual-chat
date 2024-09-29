@@ -7,7 +7,6 @@ import {
   StructuredListCell,
   Grid
 } from '@carbon/react';
-import { CircleDash } from '@carbon/icons-react';
 import './CapabilitiesTable.scss';
 import capabilitiesIcon from '../assets/img/experiences.png'
 import { Column } from 'carbon-components-react';
