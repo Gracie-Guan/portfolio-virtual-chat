@@ -4,7 +4,7 @@
 @use '@carbon/react/scss/breakpoint' as *;
 
 .work-page {
-  padding: $spacing-07 0;
+  padding-bottom: $spacing-07;
 
   section {
     margin-bottom: $spacing-09;
@@ -18,8 +18,7 @@
 }
 
 .work-breadcrumb {
-  margin-bottom: $spacing-09;
-  margin-left: $spacing-07;
+  margin-bottom: $spacing-07;
   }
 
 

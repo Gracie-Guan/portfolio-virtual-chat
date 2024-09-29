@@ -45,7 +45,7 @@ function Gallery() {
         <Column sm={4} md={8} lg={16}>
           <Breadcrumb noTrailingSlash aria-label="Page navigation">
             <BreadcrumbItem>
-              <a href="/">Homepage</a>
+              <a href="/">Home</a>
             </BreadcrumbItem>
             <BreadcrumbItem isCurrentPage>Gallery</BreadcrumbItem>
           </Breadcrumb>

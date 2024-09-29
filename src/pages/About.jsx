@@ -1,9 +1,11 @@
 import React from 'react';
-import { Grid, Column, Breadcrumb, BreadcrumbItem } from '@carbon/react';
+import { Grid, Column, Breadcrumb, BreadcrumbItem, Link } from '@carbon/react';
 import headshot from '../assets/img/gracie_headshot.jpg';
 import './About.scss';
 import Carousel from '../components/Carousel';
 import Capabilities from '../components/CapabilitiesTable';
+import { ArrowRight } from '@carbon/icons-react';
+import cv from '../assets/Gracie Guan_Resume.pdf'
 
 function About() {
   return (
@@ -24,10 +26,15 @@ function About() {
           </Column>
           <Column lg={12} md={4} sm={4}>
             <div className="intro-text">
+              <div>
               <h1 className="intro-title">
                 Hi, I'm<br />
                 Gracie Guan
               </h1>
+              <Link href={cv} renderIcon={() => <ArrowRight aria-label="Arrow Right" />}>
+                Download My CV
+              </Link>
+              </div>
               <div className="intro-description">
                 <div className='text-container'>
                 <p>

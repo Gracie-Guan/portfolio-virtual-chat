@@ -5,10 +5,12 @@ import {
   StructuredListBody,
   StructuredListRow,
   StructuredListCell,
+  Grid
 } from '@carbon/react';
 import { CircleDash } from '@carbon/icons-react';
 import './CapabilitiesTable.scss';
 import capabilitiesIcon from '../assets/img/experiences.png'
+import { Column } from 'carbon-components-react';
 
 const Capabilities = () => {
   const capabilities = [
@@ -20,12 +22,15 @@ const Capabilities = () => {
   ];
 
   return (
-    <section className="capabilities-section">
-      <h1>Capabilities</h1>
-      <div className="capabilities-content">
-        <div className="capabilities-icon">
-          <img src={capabilitiesIcon} alt='icon represent integration and universal' />
-        </div>
+    <Grid className="capabilities-section">
+      <Column lg={16} md={8} sm={4} className='capabilities-left'>
+        <h1>Capabilities</h1>
+        
+      </Column>
+
+      <Column lg={16} md={8} sm={4} className='capabilities-right'>
+      <img src={capabilitiesIcon} alt='icon represent integration and universal' className='capabilities-img' />
+      <Column lg={12} md={8} sm={4} className='capabilities-table'>
         <StructuredListWrapper aria-label="Capabilities list">
           <StructuredListHead>
             <StructuredListRow head>
@@ -48,8 +53,9 @@ const Capabilities = () => {
             ))}
           </StructuredListBody>
         </StructuredListWrapper>
-      </div>
-    </section>
+        </Column>
+      </Column>
+    </Grid>
   );
 };
 

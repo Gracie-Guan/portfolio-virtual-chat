@@ -105,7 +105,7 @@ const Home = () => {
             title="NOMNOM"
             description="A mobile application that addresses common frustrations in finding accurate food information by converting user-uploaded menu photos into accessible, text-based formats using AI."
             imageSrc={nomNomImage}
-            link="/projects/nomnom"
+            link="/nomnom"
             tags={['Mobile App']}
           />
 
@@ -113,7 +113,7 @@ const Home = () => {
             title="TCD Renters Network"
             description="A centralised website to coordinate campaigns around issues faced by the collective student renter community at Trinity College Dublin."
             imageSrc={nomNomImage}
-            link="/projects/TCDRenters"
+            link="/tcdrenters"
             tags={['Website']}
           />
         </Grid>
@@ -174,7 +174,7 @@ const Home = () => {
             </p>
           </Column>
           <Column lg={8} md={6} sm={4} className='g-link'>
-            <Link href="#" renderIcon={ArrowRight}>
+            <Link href="/gallery" renderIcon={ArrowRight}>
               View More
             </Link>
           </Column>

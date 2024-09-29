@@ -4,41 +4,43 @@
 @use '@carbon/react/scss/theme' as *;
 
 .capabilities-section {
-  padding: $spacing-09 0;
+  padding: $spacing-05 0 $spacing-09 0;
 
+  display: flex;
+  align-content: space-between;
   // h2 {
   //   @include type-style('productive-heading-05');
   //   margin-bottom: $spacing-07;
   // }
+  .capabilities-left {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .capabilities-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .capabilities-table {
+    justify-self:flex-end;
+  }
+
+  .capabilities-img {
+    margin-right: $spacing-05;
+    width: 10%;
+    align-self: flex-end;
+  }
 
   .left-wrapper {
     display: flex;
     flex-direction: column;
   }
 
-  .capabilities-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: baseline;
-
-    .capabilities-icon {
-      margin-right: $spacing-05;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-      img {
-        width: 50%;
-        align-self: center;
-        
-
-      }
-    }
-
     .cds--structured-list {
       flex-grow: 1;
       background-color: $layer-02;
-      width: 75%;
     }
 
     .cds--structured-list-th {
@@ -48,5 +50,4 @@
     .cds--structured-list-td {
       @include type-style('body-long-01');
     }
-  }
 }

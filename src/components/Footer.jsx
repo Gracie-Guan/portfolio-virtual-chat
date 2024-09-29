@@ -5,6 +5,7 @@ import './Footer.scss';
 import logo from '../assets/img/logo_white.svg'
 
 const Footer = () => {
+  
   return (
     <footer className="custom-footer">
       <Grid className="custom-grid" narrow>

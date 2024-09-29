@@ -4,13 +4,13 @@
 @use '@carbon/react/scss/theme' as *;
 
 .about-page {
-  .about-breadcrumb{
-    margin: $spacing-07;
-  }
+  // .about-breadcrumb{
+  //   margin: $spacing-07;
+  // }
 
 
   .intro-section {
-    padding: $spacing-09 0;
+    padding: $spacing-11 0;
     
     @include breakpoint(sm) {
       padding: $spacing-07 0;
@@ -36,7 +36,7 @@
 
       .intro-title {
         @include type-style('productive-heading-07');
-        margin-bottom: $spacing-06;
+        margin-bottom: $spacing-05;
       }
 
       .intro-description {

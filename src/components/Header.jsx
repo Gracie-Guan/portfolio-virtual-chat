@@ -13,8 +13,8 @@ import {
   HeaderMenuButton,
   SideNav, SideNavItems,
 } from '@carbon/react';
-import { LogoLinkedin, Email } from '@carbon/react/icons';
-// import { Link } from 'react-router-dom';
+import { LogoLinkedin, Email, LogoGithub } from '@carbon/react/icons';
+import { Link as RouterLink } from 'react-router-dom';
 
 function MyHeader() {
 
@@ -26,9 +26,9 @@ function MyHeader() {
       window.location.href = 'mailto:gracie.yy.guan@gmail.com';
     };
 
-    const handleNavigation = (page) => {
-      window.dispatchEvent(new CustomEvent('navigate', { detail: page }));
-    };
+    const handleGithubClick = () => {
+      window.location.href = '';
+    }
 
   return (<HeaderContainer render={({
     isSideNavExpanded,
@@ -37,13 +37,13 @@ function MyHeader() {
           <Header aria-label="Gracie Guan Portfolio">
             <SkipToContent />
             <HeaderMenuButton aria-label={isSideNavExpanded ? 'Close menu' : 'Open menu'} onClick={onClickSideNavExpand} isActive={isSideNavExpanded} aria-expanded={isSideNavExpanded} />
-            <HeaderName href="#" onClick={() => handleNavigation('home')} prefix={null}>
+            <HeaderName href="/" prefix={null}>
               Gracie Guan
             </HeaderName>
             <HeaderNavigation aria-label="Gracie Guan Portfolio">
-              <HeaderMenuItem href="#" onClick={() => handleNavigation('about')}>About</HeaderMenuItem>
-              <HeaderMenuItem href="#" onClick={() => handleNavigation('work')}>Work</HeaderMenuItem>
-              <HeaderMenuItem href="#" onClick={() => handleNavigation('gallery')}>Gallery</HeaderMenuItem>
+              <HeaderMenuItem href="/about">About</HeaderMenuItem>
+              <HeaderMenuItem href="/work">Work</HeaderMenuItem>
+              <HeaderMenuItem href="/gallery">Gallery</HeaderMenuItem>
             </HeaderNavigation>
             <HeaderGlobalBar>
               <HeaderGlobalAction aria-label="Linkedin" onClick={handleLinkedInClick}>
@@ -52,13 +52,16 @@ function MyHeader() {
               <HeaderGlobalAction aria-label="Email" onClick={handleEmailClick}>
                 <Email size={20} />
               </HeaderGlobalAction>
+              <HeaderGlobalAction aria-label="Email" onClick={handleGithubClick}>
+                <LogoGithub size={20} />
+              </HeaderGlobalAction>
             </HeaderGlobalBar>
             <SideNav aria-label="Side navigation" expanded={isSideNavExpanded} isPersistent={false} onSideNavBlur={onClickSideNavExpand}>
               <SideNavItems>
                 <HeaderSideNavItems>
-                  <HeaderMenuItem href="#" onClick={() => handleNavigation('about')} >About</HeaderMenuItem>
-                  <HeaderMenuItem href="#" onClick={() => handleNavigation('work')}>Work</HeaderMenuItem>
-                  <HeaderMenuItem href="#" onClick={() => handleNavigation('gallery')}>Gallery</HeaderMenuItem>
+                  <HeaderMenuItem href="/about">About</HeaderMenuItem>
+                  <HeaderMenuItem href="/work">Work</HeaderMenuItem>
+                  <HeaderMenuItem href="/gallery">Gallery</HeaderMenuItem>
                 </HeaderSideNavItems>
               </SideNavItems>
             </SideNav>

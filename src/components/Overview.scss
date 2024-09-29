@@ -1,0 +1,97 @@
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.project-overview {
+  padding: $spacing-05 0;
+  margin-bottom: $spacing-07;
+
+  .title {
+    @include type-style('productive-heading-06');
+    color: $link-primary;
+    // margin-bottom: $spacing-03;
+  }
+
+  .content-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .upper-content {
+    flex-grow: 1;
+  }
+
+  .subtitle {
+    @include type-style('productive-heading-04');
+    margin-bottom: $spacing-05;
+  }
+
+  .project-tags {
+    margin-bottom: $spacing-07;
+
+    .cds--tag {
+      margin-right: $spacing-03;
+      margin-bottom: $spacing-03;
+    }
+  }
+
+  .project-details {
+    margin-top: auto; 
+    justify-items: start;
+    align-items: center;
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: center;
+    margin: $spacing-05;
+
+    .overview-icon {
+      width: 48px;
+      height: 48px;
+      margin-right: $spacing-05;
+      flex-shrink: 0;
+    }
+
+    div {
+      flex-grow: 1;
+    }
+
+    h3 {
+      @include type-style('heading-01');
+      margin-bottom: $spacing-02;
+    }
+
+    p {
+      @include type-style('body-short-01');
+    }
+  }
+
+  .image-column {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @include breakpoint(md) {
+    .content-column,
+    .image-column {
+      height: 100%;
+    }
+  }
+
+  @include breakpoint(lg) {
+    .content-column,
+    .image-column {
+      height: 100%;
+    }
+  }
+}
