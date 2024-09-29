@@ -3,6 +3,7 @@ import { Grid, Column, Breadcrumb, BreadcrumbItem } from '@carbon/react';
 import headshot from '../assets/img/gracie_headshot.jpg';
 import './About.scss';
 import Carousel from '../components/Carousel';
+import Capabilities from '../components/CapabilitiesTable';
 
 function About() {
   return (
@@ -53,8 +54,10 @@ function About() {
 
       <section className='journey-section'>
         <Carousel />
+      </section>
 
-
+      <section className='capabilities-section'>
+        <Capabilities />
       </section>
     </div>
   )
