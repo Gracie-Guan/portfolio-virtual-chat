@@ -1,5 +1,6 @@
 import React from 'react';
 import { AspectRatio } from '@carbon/react';
+import './MultimediaContent.scss';
 
 const MultimediaContent = ({ type, src, alt, caption }) => {
   const renderContent = () => {
@@ -9,7 +10,7 @@ const MultimediaContent = ({ type, src, alt, caption }) => {
           <img 
             src={src} 
             alt={alt} 
-            style={{ width: '100%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto', marginBottom:'16px' }}
             onError={(e) => {
               console.error(`Error loading image: ${src}`);
               e.target.src = '/path/to/fallback-image.jpg';
@@ -28,15 +29,15 @@ const MultimediaContent = ({ type, src, alt, caption }) => {
       case 'youtube':
         return (
           <AspectRatio ratio="16x9">
+         <div className="youtube-container">
             <iframe
-              width="100%"
-              height="100%"
               src={`https://www.youtube.com/embed/${src}`}
+              title={alt}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              title={alt}
             ></iframe>
+            </div>
           </AspectRatio>
         );
       default:

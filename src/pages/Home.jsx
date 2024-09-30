@@ -12,6 +12,7 @@ import ProjectCardB from '../components/ProjectCard/ProjectCardB'
 import styled from 'styled-components';
 
 import nomNomImage from '../assets/img/Nomnom-1.png';
+import tcdRenter from '../assets/img/TcdRenters.png';
 
 import marketResearchImage from '../assets/img/MarketResearch.jpg';
 import gallerypic1 from '../assets/img/computer_desk.jpg';
@@ -112,7 +113,7 @@ const Home = () => {
           <ProjectCardA
             title="TCD Renters Network"
             description="A centralised website to coordinate campaigns around issues faced by the collective student renter community at Trinity College Dublin."
-            imageSrc={nomNomImage}
+            imageSrc={tcdRenter}
             link="/tcdrenters"
             tags={['Website']}
           />
