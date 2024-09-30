@@ -2,36 +2,48 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Column, Tile, PaginationNav } from '@carbon/react';
 import './Carousel.scss';
 
+import undergrad from '../assets/img/introphoto.jpg';
+import tcdgrad from '../assets/img/SNG01193.jpg';
+import strategy from '../assets/img/strategy.jpg';
+import production from '../assets/img/production.jpg';
+import meizu from '../assets/img/meizu.jpg';
+import pro from '../assets/img/pro.jpg';
+
 const journeyItems = [
   {
     title: "What brings me here?",
-    description: "Description of what brings me here...",
+    description: "From a small city in China to the vibrant tech scene in Dublin, transitioning from a marketer to exploring exciting opportunities in technology, my journey is driven by curiosity and determination.",
     image: null
   },
   {
-    title: "Title 1",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "/path-to-image-1.jpg"
+    title: "Diving into the Digital Realm",
+    description: "2023 - 2024 | I graduated with first class honours from Trinity with an MSc in Interactive Digital Media.",
+    image: tcdgrad,
   },
   {
-    title: "Title 2",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "/path-to-image-2.jpg"
+    title: "Developing Strategy Thinking",
+    description: "2019 - 2023 | Working in a startup has pushed me to think more multi-dimensionally and results-focused. Over time, I have learned to take a more strategic approach when planning market actions.",
+    image: strategy,
   },
   {
-    title: "Title 3",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "/path-to-image-3.jpg"
+    title: "Having Fun in Content Marketing",
+    description: "2018 - 2019 | Content marketing lets me blend creativity with work, while WPP has taught me to think globally and outside the box.",
+    image: production,
   },
   {
-    title: "Title 4",
-    description: "Additional journey item description.",
-    image: "/path-to-image-4.jpg"
+    title: "Experiencing the Tech Vibe",
+    description: "2015 - 2018 | Meizu was like another college for me, where I gain interest in tech and try to expand my boundaries.",
+    image: meizu,
   },
   {
-    title: "Title 5",
-    description: "Another journey item description.",
-    image: "/path-to-image-5.jpg"
+    title: "Learning to be a Pro",
+    description: "2014 - 2015 | My career began as an Account Executive at a digital marketing agency, where I learned the importance of professionalism, work standards, and strong ethics.",
+    image: pro,
+  },
+  {
+    title: "Juggling Dual Degree",
+    description: "2010 - 2014 | I graduated with dual Bachelor's degrees in Finance and TV Broadcasting, giving me two distinct perspectives to better understand the world.",
+    image: undergrad,
   }
 ];
 

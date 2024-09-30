@@ -3,47 +3,39 @@
 @use '@carbon/react/scss/theme' as *;
 
 .gallery-page {
-  margin-top: $spacing-07;
+  margin-top: $spacing-06;
 
-  .cds--breadcrumb {
-    margin-bottom: $spacing-05;
-    margin-left: $spacing-13;
+
+  .gallery-breadcrumb {
+    margin-left: 17%;
   }
 
   .gallery-content {
     display: flex;
+    margin-top: $spacing-06;
+    min-height: calc(100vh - #{$spacing-09});
   }
 
   .side-nav-column {
-    position: relative;
+    width: 16.67%;
+    min-width: 200px;
   }
 
-  .nav-toggle-button {
-    position: fixed;
-    top: $spacing-09; // Adjust based on your header height
-    left: $spacing-05;
-    z-index: 1000;
+  .gallery-main-content {
+    flex-grow: 1;
+    padding-left: $spacing-05;
+    width: calc(100% - 16.67%);
+  }
+
+  h2 {
+    margin-bottom: $spacing-07;
   }
 
   .gallery-nav {
-    position: fixed;
-    top: $spacing-12; // Adjust based on your header height
-    left: $spacing-07;
-    height: 50vh;
-    width: 12.5%; 
-    background-color: $layer-02;
+    position: sticky;
+    top: $spacing-09; // 调整以匹配您的 header 高度
+    height: calc(100vh - #{$spacing-09});
     overflow-y: auto;
-    transition: transform 0.3s ease;
-    z-index: 999;
-
-    @include breakpoint-down(md) {
-      transform: translateX(-100%);
-      width: 100%;
-
-      &.open {
-        transform: translateX(0);
-      }
-    }
 
     .document-toc-list {
       list-style: none;
@@ -58,7 +50,7 @@
       transition: border-color 0.2s ease;
 
       &.active {
-        border-left-color: $link-primary; 
+        border-left-color: $link-primary;
       }
     }
 
@@ -77,26 +69,122 @@
     }
 
     .document-toc-item.active .document-toc-link {
-      color: $text-primary;
+      color: $link-primary;
       font-weight: 600;
     }
   }
 
-  .gallery-main-content {
-    margin-left: 12.5%; 
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $spacing-05;
+    margin-bottom: $spacing-07;
+  }
 
-    @include breakpoint-down(md) {
-      margin-left: 0;
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      display: block;
     }
 
-    section {
-      margin-bottom: $spacing-09;
+    &.ratio-16-9 {
+      grid-column: span 6; // 占据6列，一行2张
+      &::before {
+        padding-top: 56.25%; // 16:9 ratio
+      }
+    }
+
+    &.ratio-1-1 {
+      grid-column: span 4; // 占据4列，一行3张
+      &::before {
+        padding-top: 100%; // 1:1 ratio
+      }
+    }
+
+    &.ratio-3-4 {
+      grid-column: span 3; // 占据3列，一行4张
+      &::before {
+        padding-top: 133.33%; // 3:4 ratio
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
-  @include breakpoint(md) {
-    .nav-toggle-button {
-      display: none;
+  // Responsive adjustments
+  @include breakpoint-down(md) {
+    .gallery-content {
+      flex-direction: column;
+    }
+
+    .side-nav-column {
+      width: 100%;
+      position: relative;
+    }
+
+    .gallery-nav {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      transform: translateX(-100%);
+      background-color: $background;
+      z-index: 1000;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    .gallery-main-content {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .gallery-item {
+      &.ratio-16-9 {
+        grid-column: span 6; // 一行1张
+      }
+
+      &.ratio-1-1 {
+        grid-column: span 3; // 一行2张
+      }
+
+      &.ratio-3-4 {
+        grid-column: span 3; // 一行2张
+      }
+    }
+  }
+
+  @include breakpoint-down(sm) {
+    .gallery-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery-item {
+      &.ratio-16-9,
+      &.ratio-1-1,
+      &.ratio-3-4 {
+        grid-column: span 4; // 所有比例都是一行1张
+      }
     }
   }
 }
