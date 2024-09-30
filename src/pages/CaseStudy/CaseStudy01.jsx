@@ -2,9 +2,7 @@ import React from 'react';
 import { Column, Breadcrumb, BreadcrumbItem } from '@carbon/react';
 import CaseStudy from './CaseStudy'; 
 import nomnomUi from '../../assets/img/nomnom_ui.png';
-import { type } from '@testing-library/user-event/dist/type';
-// import userResearchImage from '../assets/img/user-research.jpg';
-// import appDemoVideo from '../assets/video/app-demo.mp4';
+
 import persona1 from '../../assets/img/persona1.jpg';
 import persona2 from '../../assets/img/persona2.jpg';
 import persona3 from '../../assets/img/persona3.jpg';
@@ -14,6 +12,7 @@ import FinalDesign from '../../assets/img/FinalDesign.png';
 import designguideline from '../../assets/img/designguideline.png';
 import illustrations from '../../assets/img/illustrations.png';
 import testimonial from '../../assets/img/testimonial.png';
+import objectives from '../../assets/img/objectives.png';
 
 const NOMNOMCaseStudy = () => {
   const projectData = {
@@ -49,10 +48,12 @@ const NOMNOMCaseStudy = () => {
       id: "problem objective",
       title: "Objective",
       content: [
-          "Find the Solution: ",
-          "Design and develop a technical method to ensure up-to-date restaurant menu information.",
-          "Build the Solution: ",
-          "Build a mobile application that demonstrates verify the purpose functionalities."
+        {
+          type: 'multimedia',
+          mediaType: 'image',
+          src: objectives,
+          alt: 'project objectives',
+        },
       ]
     },
     {

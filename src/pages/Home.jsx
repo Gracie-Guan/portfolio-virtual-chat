@@ -14,11 +14,15 @@ import styled from 'styled-components';
 import nomNomImage from '../assets/img/Nomnom-1.png';
 import tcdRenter from '../assets/img/TcdRenters.png';
 
-import marketResearchImage from '../assets/img/MarketResearch.jpg';
+import marketResearchImage from '../assets/img/MarketResearch1.jpg';
+import productLaunch from '../assets/img/launch1.jpg';
+import chimelong from '../assets/img/chimelong.jpg';
+import testdrive from '../assets/img/test_drive.png';
+
 import gallerypic1 from '../assets/img/computer_desk.jpg';
-import gallerypic2 from '../assets/img/cystal_ball.jpg';
-import gallerypic3 from '../assets/img/3Dmodel.png';
-import gallerypic4 from '../assets/img/data_visual.jpg';
+import gallerypic2 from '../assets/img/visualcomputing1.png';
+import gallerypic3 from '../assets/img/photography/lake.jpg';
+import gallerypic4 from '../assets/img/illustration/myclarins.jpg';
 
 const StyledGrid = styled(Grid)`
   --cds-grid-gutter: 0; 
@@ -137,30 +141,30 @@ const Home = () => {
         <StyledGrid condensed className='des-cards'>
           <ProjectCardB
             title="Market Research for R&D"
-            description="market research for electric scooter products, conducted in-depth user and distributor interviews, and formulated firsthand market insight and analysis for the R&D department."
+            description="The company decided to develop a new model of electric scooter, but how to make decision on product specs, price, and market channel?"
             link="/projects/market-research"
             imageSrc={marketResearchImage}
           />
 
           <ProjectCardB
             title="Product Launch"
-            description="market research for electric scooter products, conducted in-depth user and distributor interviews, and formulated firsthand market insight and analysis for the R&D department."
+            description="Start-up ready to launch the brand and product with new concept in a traditional industry, how to steal the spotlight?"
             link="/projects/market-research"
-            imageSrc={marketResearchImage}
+            imageSrc={productLaunch}
           />
 
           <ProjectCardB
             title="Process Improvement SOP"
-            description="market research for electric scooter products, conducted in-depth user and distributor interviews, and formulated firsthand market insight and analysis for the R&D department."
+            description="What if the people you rely upon to engage users have different backgrounds and skills? Maybe Creating an SOP and standard kit."
             link="/projects/market-research"
-            imageSrc={marketResearchImage}
+            imageSrc={testdrive}
           />
 
           <ProjectCardB
             title="Integrated Marketing Campaign"
-            description="market research for electric scooter products, conducted in-depth user and distributor interviews, and formulated firsthand market insight and analysis for the R&D department."
+            description="The old amusement park wanted to give visitors new reasons to come. Here's a trick: offer some new topics for conversation."
             link="/projects/market-research"
-            imageSrc={marketResearchImage}
+            imageSrc={chimelong}
           />
         </StyledGrid>
       </section>
@@ -183,7 +187,7 @@ const Home = () => {
 
         <div className='gallery-grid'>
           <div className="gallery-item gallery-item-large">
-            <img src={gallerypic1} alt="Gallery item 1" />
+            <img src={gallerypic4} alt="Gallery item 1" />
           </div>
           <div className="gallery-item gallery-item-small">
             <img src={gallerypic2} alt="Gallery item 2" />
@@ -192,7 +196,7 @@ const Home = () => {
             <img src={gallerypic3} alt="Gallery item 3" />
           </div>
           <div className="gallery-item gallery-item-large">
-            <img src={gallerypic4} alt="Gallery item 4" />
+            <img src={gallerypic1} alt="Gallery item 4" />
           </div>
         </div>
       </section>

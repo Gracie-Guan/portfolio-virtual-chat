@@ -7,7 +7,10 @@ import './Work.scss';
 
 import nomNomImage from '../assets/img/Nomnom-1.png';
 import tcdRentersImage from '../assets/img/TcdRenters.png';
-import marketResearchImage from '../assets/img/MarketResearch.jpg';
+import marketResearchImage from '../assets/img/MarketResearch2.jpg';
+import productLaunch from '../assets/img/launch2.jpg';
+import chimelong from '../assets/img/chimelong.jpg';
+import testdrive from '../assets/img/test_drive.png';
 
 const Work = () => {
   return (
@@ -54,29 +57,29 @@ const Work = () => {
         <Grid fullWidth>
           <ProjectCardD
             title="Market Research for R&D"
-            description="Conducted in-depth user and distributor interviews for electric scooter products, formulating firsthand market insight and analysis for the R&D department."
+            description="The company decided to develop a new model of electric scooter, but how to make decision on product specs, price, and market channel?"
             imageSrc={marketResearchImage}
             link="/projects/market-research"
             tags={['Market Research']}
           />
           <ProjectCardD
             title="Product Launch"
-            description="Managed the successful launch of a new product line, coordinating marketing efforts across multiple channels."
-            imageSrc={marketResearchImage}
+            description="Start-up ready to launch the brand and product with new concept in a traditional industry, how to steal the spotlight?"
+            imageSrc={productLaunch}
             link="/projects/product-launch"
             tags={['Product Marketing']}
           />
           <ProjectCardD
             title="Process Improvement SOP"
-            description="Developed and implemented standard operating procedures to streamline marketing processes and improve team efficiency."
-            imageSrc={marketResearchImage}
+            description="What if the people you rely upon to engage users have different backgrounds and skills? Maybe Creating an SOP and standard kit."
+            imageSrc={testdrive}
             link="/projects/process-improvement"
             tags={['Process Optimization']}
           />
           <ProjectCardD
             title="Integrated Marketing Campaign"
-            description="Led a cross-channel marketing campaign that significantly increased brand awareness and drove sales growth."
-            imageSrc={marketResearchImage}
+            description="The old amusement park wanted to give visitors new reasons to come. Here's a trick: offer some new topics for conversation."
+            imageSrc={chimelong}
             link="/projects/marketing-campaign"
             tags={['Integrated Marketing']}
           />

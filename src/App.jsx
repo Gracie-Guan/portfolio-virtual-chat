@@ -8,6 +8,7 @@ import Work from './pages/Work';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
 import NomnomCaseStudy from './pages/CaseStudy/CaseStudy01';
+import TCDRenters from './pages/CaseStudy/CaseStudy02';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
                 <Route path='/about' element={<About />}  />
                 <Route path='/work' element={<Work />}  />
                 <Route path='/gallery' element={<Gallery />}  />
-                <Route path='nomnom' element={<NomnomCaseStudy/>} />
+                <Route path='/nomnom' element={<NomnomCaseStudy/>} />
+                <Route path='/tcdrenters' element={<TCDRenters/>} />
             </Routes>
           </Router>
         </Content>
