@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Column, Content, Button, Breadcrumb, BreadcrumbItem } from '@carbon/react';
 import { Add, Close } from '@carbon/icons-react';
 import './Gallery.scss';
+import { Link } from 'react-router-dom';
 
 import setting1 from '../assets/img/3D/Final-A3-Yunyi-Guan2.jpg';
 import setting2 from '../assets/img/3D/computerdesk.jpg';
@@ -130,7 +131,7 @@ function Gallery() {
         <Column sm={4} md={8} lg={16}>
           <Breadcrumb noTrailingSlash aria-label="Page navigation" className='gallery-breadcrumb'>
             <BreadcrumbItem>
-              <a href="/">Homepage</a>
+              <Link as={Link} to="/">Home</Link>
             </BreadcrumbItem>
             <BreadcrumbItem isCurrentPage>Gallery</BreadcrumbItem>
           </Breadcrumb>

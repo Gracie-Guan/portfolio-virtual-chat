@@ -37,13 +37,13 @@ function MyHeader() {
           <Header aria-label="Gracie Guan Portfolio">
             <SkipToContent />
             <HeaderMenuButton aria-label={isSideNavExpanded ? 'Close menu' : 'Open menu'} onClick={onClickSideNavExpand} isActive={isSideNavExpanded} aria-expanded={isSideNavExpanded} />
-            <HeaderName element={Link} to="/" prefix={null}>
+            <HeaderName as={Link} to="/" prefix={null}>
               Gracie Guan
             </HeaderName>
             <HeaderNavigation aria-label="Gracie Guan Portfolio">
-              <HeaderMenuItem element={Link} to="/about">About</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/work">Work</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/playground">Visual Playground</HeaderMenuItem>
+              <HeaderMenuItem as={Link} to="/about">About</HeaderMenuItem>
+              <HeaderMenuItem as={Link} to="/work">Work</HeaderMenuItem>
+              <HeaderMenuItem as={Link} to="/playground">Visual Playground</HeaderMenuItem>
             </HeaderNavigation>
             <HeaderGlobalBar>
               <HeaderGlobalAction aria-label="Linkedin" onClick={handleLinkedInClick}>
@@ -59,9 +59,9 @@ function MyHeader() {
             <SideNav aria-label="Side navigation" expanded={isSideNavExpanded} isPersistent={false} onSideNavBlur={onClickSideNavExpand}>
               <SideNavItems>
                 <HeaderSideNavItems>
-                  <HeaderMenuItem href="/about">About</HeaderMenuItem>
-                  <HeaderMenuItem href="/work">Work</HeaderMenuItem>
-                  <HeaderMenuItem href="/playground">Visual Playground</HeaderMenuItem>
+                  <HeaderMenuItem as={Link} to="/about">About</HeaderMenuItem>
+                  <HeaderMenuItem as={Link} to="/work">Work</HeaderMenuItem>
+                  <HeaderMenuItem as={Link} to="/playground">Visual Playground</HeaderMenuItem>
                 </HeaderSideNavItems>
               </SideNavItems>
             </SideNav>

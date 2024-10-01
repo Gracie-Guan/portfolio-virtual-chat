@@ -1,4 +1,4 @@
-import React,  { useState, useEffect }  from 'react';
+import React from 'react';
 import { Content } from '@carbon/react';
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import MyHeader from './components/Header';
@@ -13,7 +13,6 @@ import MktResearch from './pages/CaseStudy/csMkt01';
 import ProductLaunch from './pages/CaseStudy/csMkt02';
 import TestDrive from './pages/CaseStudy/csMkt03';     
 import MktIntegrated from './pages/CaseStudy/csMkt04'; 
-
 
 function App() {
   return (

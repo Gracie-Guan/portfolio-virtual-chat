@@ -26,10 +26,11 @@ function TCDRenters() {
 
   const sections = [
     {
-      id: "overview",
-      title: "Project Overview",
+      id: "summary",
+      title: "Project Summary",
       content: [
-        "The TCD Renters' Solidarity Network, a grassroots campus residents' action group, sought to create a centralised website to coordinate campaigns around issues faced by the collective student renter community at Trinity College Dublin. The project aimed to improve the organization's legitimacy, provide resources for student renters, promote advocacy, and increase student engagement.",
+        "The TCD Renters' Solidarity Network struggled with a limited digital presence, hindering their ability to engage students and drive change in housing issues.", 
+        "our team developed a comprehensive website solution, to coordinate campaigns around issues faced by the collective student renter community at Trinity College Dublin. The project aimed to improve the organization's legitimacy, provide resources for student renters, promote advocacy, and increase student engagement.",
         {
           type: 'multimedia',
           mediaType: 'image',

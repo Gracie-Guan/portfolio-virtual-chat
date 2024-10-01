@@ -28,12 +28,22 @@ const NOMNOMCaseStudy = () => {
 
   const sections = [
     {
-      id: "overview",
-      title: "Project Overview",
+      id: "summary",
+      title: "Project Summary",
       content: [
-        "NOMNOM is a mobile application that revolutionizes restaurant menu discovery. It addresses common frustrations in finding accurate food information by converting user-uploaded menu photos into accessible, text-based formats. The app enables users to search for specific dishes across multiple restaurants, shifting from a restaurant-centric to a dish-centric approach.",
-        "Developed as a master's degree project, I led a cross-functional and multi-cultural team of six to create this app from concept to MVP in a 2-month timeframe with zero budget.", 
-        "My role encompassed project management, product design, and frontend development."
+        "NOMNOM addresses a common frustration in the restaurant industry: outdated or incomplete menu information on existing platforms, which leads to user dissatisfaction and missed opportunities for restaurants.", 
+        "To solve this, we developed an AI-powered mobile application that revolutionizes menu discovery. Our approach leverages image-to-text conversion using Google Cloud Vision API and Gemini AI, enabling a dish-centric search across multiple restaurants. We encourage user-generated content to keep information current and provide tools for restaurant owners to verify and update their menu details. ",
+        "The result:",
+        "- an MVP that achieved 90% accuracy in menu text extraction",
+        "- largely enhanced the accessibility of menu, garnered highly positive feedback in beta testing", 
+        "- enabled faster menu discovery compared to traditional methods.", 
+        "This project not only delivered a useful product but also showcased our team's ability to innovate and execute under constraints, setting a strong foundation for future enhancements and scalability in the restaurant tech space.",
+        {
+          type: 'multimedia',
+          mediaType: 'youtube',
+          src: '1QEd1i37qeo?si=wWQdvnXu8nTkWaBU',
+          alt: 'nomnom walk through video',
+        },
       ]
     },
     {
@@ -154,12 +164,7 @@ const NOMNOMCaseStudy = () => {
       id: "final design",
       title:"Final Design",
       content:[
-        {
-          type: 'multimedia',
-          mediaType: 'youtube',
-          src: '1QEd1i37qeo?si=wWQdvnXu8nTkWaBU',
-          alt: 'nomnom walk through video',
-        },
+
         {
           type: 'multimedia',
           mediaType: 'image',
@@ -195,7 +200,7 @@ const NOMNOMCaseStudy = () => {
         "- NOMNOM stood out at the showcase, recognized for having the highest level of completion among all presented projects.",
         "- The demo attracted significant interest, with over 50 people interacting with the application.",
         "- User feedback was positive, with more than 80% of comments praising the menu feature and the innovative tender function.",
-        "Some comments from our feedback survey:",
+        "Some comments from our potential users:",
         {
           type: 'multimedia',
           mediaType: 'image',

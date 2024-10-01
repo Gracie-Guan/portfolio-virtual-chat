@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid, Column, Link, AspectRatio } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
 import './Home.scss';
-import colorlogo from '../assets/img/colorlogo.png';
 import openness from '../assets/img/Open-source.png';
 import thinking from '../assets/img/Connect.png';
 import agile from '../assets/img/Fast.png';
@@ -182,7 +181,7 @@ const Home = () => {
             </p>
           </Column>
           <Column lg={8} md={6} sm={4} className='g-link'>
-            <Link href="#/gallery" renderIcon={ArrowRight}>
+            <Link href="#/playground" renderIcon={ArrowRight}>
               View More
             </Link>
           </Column>

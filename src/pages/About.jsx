@@ -7,12 +7,13 @@ import Capabilities from '../components/CapabilitiesTable';
 import { ArrowRight } from '@carbon/icons-react';
 import cv from '../assets/Gracie Guan_Resume.pdf'
 
+
 function About() {
   return (
     <div className='about-page'>
       <Breadcrumb noTrailingSlash aria-label="Page navigation" className='about-breadcrumb'>
         <BreadcrumbItem>
-          <a href="/">Home</a>
+          <a href="#/">Home</a>
         </BreadcrumbItem>
         <BreadcrumbItem isCurrentPage>About</BreadcrumbItem>
       </Breadcrumb>
