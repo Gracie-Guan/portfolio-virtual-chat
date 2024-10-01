@@ -59,28 +59,28 @@ const Work = () => {
             title="Market Research for R&D"
             description="The company decided to develop a new model of electric scooter, but how to make decision on product specs, price, and market channel?"
             imageSrc={marketResearchImage}
-            link="/projects/market-research"
+            link="/research"
             tags={['Market Research']}
           />
           <ProjectCardD
             title="Product Launch"
             description="Start-up ready to launch the brand and product with new concept in a traditional industry, how to steal the spotlight?"
             imageSrc={productLaunch}
-            link="/projects/product-launch"
+            link="/launch"
             tags={['Product Marketing']}
           />
           <ProjectCardD
             title="Process Improvement SOP"
             description="What if the people you rely upon to engage users have different backgrounds and skills? Maybe Creating an SOP and standard kit."
             imageSrc={testdrive}
-            link="/projects/process-improvement"
+            link="/testdrive"
             tags={['Process Optimization']}
           />
           <ProjectCardD
             title="Integrated Marketing Campaign"
             description="The old amusement park wanted to give visitors new reasons to come. Here's a trick: offer some new topics for conversation."
             imageSrc={chimelong}
-            link="/projects/marketing-campaign"
+            link="/campaign"
             tags={['Integrated Marketing']}
           />
         </Grid>

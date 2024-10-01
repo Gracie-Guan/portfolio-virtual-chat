@@ -23,7 +23,7 @@ const Capabilities = () => {
   return (
     <Grid className="capabilities-section">
       <Column lg={16} md={8} sm={4} className='capabilities-left'>
-        <h1>Capabilities</h1>
+        <h2>Capabilities</h2>
         
       </Column>
 

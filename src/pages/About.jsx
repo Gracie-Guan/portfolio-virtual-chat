@@ -37,15 +37,17 @@ function About() {
               </div>
               <div className="intro-description">
                 <div className='text-container'>
-                <p>
-                A Creator. I love bringing concepts to life, whether I'm behind a camera, sketching on a tablet, or putting together code. It's my happy place! It's like being a digital blacksmith, forging raw ideas into polished creations. Design thinking is my trusty partner in this adventure, helping me craft solutions that not only look cool but also make a difference.
-                </p>
+                <div>
+                <h3>A Creator</h3> 
+                <p>Whether I'm behind a camera, sketching on a tablet, or putting together code, it is my happy place. I love being a digital blacksmith, forging raw ideas into polished creations. Design thinking is my trusty partner, helping me craft solutions that not only look cool but also make a difference.</p>
+                </div>
                 </div>
 
                 <div className='text-container'>
-                <p>
-                A Problem Solver. I see problems as puzzles waiting to be solved. My approach? I observe with an open mind, armed with a toolkit that's part analytical thinking, part creative flair, and a whole lot of insight. I'm like a detective, piecing together clues from user behavior, business performance, and technical possibilities to crack the case. And the best part? Each solution opens up a new world of possibilities.
-                </p>
+                <div>
+                <h3>A Problem Solver</h3> 
+                <p>I observe with an open mind, armed with a toolkit that's part analytical thinking, part creative flair, and a whole lot of insight. I'm like a detective, piecing together clues from user behavior, business performance, and technical possibilities to crack the case. </p>
+                </div>
                 </div>
               </div>
             </div>

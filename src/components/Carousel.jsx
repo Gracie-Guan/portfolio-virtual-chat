@@ -69,7 +69,7 @@ const Carousel = () => {
 
   return (
     <section className="journey-section">
-      <h2>Journey</h2>
+      <h2>My Journey</h2>
       <Grid narrow className="journey-grid">
         {displayedItems.map((item, index) => (
           <Column sm={4} md={2} lg={4} key={index}>

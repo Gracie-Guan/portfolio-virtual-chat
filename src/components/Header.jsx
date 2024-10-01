@@ -43,7 +43,7 @@ function MyHeader() {
             <HeaderNavigation aria-label="Gracie Guan Portfolio">
               <HeaderMenuItem href="/about">About</HeaderMenuItem>
               <HeaderMenuItem href="/work">Work</HeaderMenuItem>
-              <HeaderMenuItem href="/gallery">Gallery</HeaderMenuItem>
+              <HeaderMenuItem href="/playground">Visual Playground</HeaderMenuItem>
             </HeaderNavigation>
             <HeaderGlobalBar>
               <HeaderGlobalAction aria-label="Linkedin" onClick={handleLinkedInClick}>
@@ -61,7 +61,7 @@ function MyHeader() {
                 <HeaderSideNavItems>
                   <HeaderMenuItem href="/about">About</HeaderMenuItem>
                   <HeaderMenuItem href="/work">Work</HeaderMenuItem>
-                  <HeaderMenuItem href="/gallery">Gallery</HeaderMenuItem>
+                  <HeaderMenuItem href="/playground">Visual Playground</HeaderMenuItem>
                 </HeaderSideNavItems>
               </SideNavItems>
             </SideNav>

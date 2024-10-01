@@ -10,6 +10,7 @@ import collab from '../assets/img/Collaborate-with-teams.png'
 import ProjectCardA from '../components/ProjectCard/ProjectCardA';
 import ProjectCardB from '../components/ProjectCard/ProjectCardB'
 import styled from 'styled-components';
+import headshot from '../assets/img/gracie_headshot_home.jpg';
 
 import nomNomImage from '../assets/img/Nomnom-1.png';
 import tcdRenter from '../assets/img/TcdRenters.png';
@@ -45,7 +46,7 @@ const Home = () => {
             </Link>
           </Column>
           <Column lg={4} md={2} sm={4} >
-            <img className='image' src={colorlogo} alt='gracie logo'/>
+            <img className='image' src={headshot} alt='gracie logo'/>
           </Column>
         </Grid>
       </section>
@@ -95,7 +96,7 @@ const Home = () => {
         <Grid className='des-header'>
           <Column lg={8} md={4} sm={4}>
             <h1> 
-              Design and Development
+              Design and Development Work
             </h1>
           </Column>
           <Column lg={8} md={4} sm={4}>
@@ -128,7 +129,7 @@ const Home = () => {
         <Grid className='mkt-header'>
           <Column lg={8} md={4} sm={4}>
             <h1> 
-              Marketing
+              Marketing Projects
             </h1>
           </Column>
           <Column lg={8} md={4} sm={4}>
@@ -142,28 +143,28 @@ const Home = () => {
           <ProjectCardB
             title="Market Research for R&D"
             description="The company decided to develop a new model of electric scooter, but how to make decision on product specs, price, and market channel?"
-            link="/projects/market-research"
+            link="/research"
             imageSrc={marketResearchImage}
           />
 
           <ProjectCardB
             title="Product Launch"
             description="Start-up ready to launch the brand and product with new concept in a traditional industry, how to steal the spotlight?"
-            link="/projects/market-research"
+            link="/launch"
             imageSrc={productLaunch}
           />
 
           <ProjectCardB
             title="Process Improvement SOP"
             description="What if the people you rely upon to engage users have different backgrounds and skills? Maybe Creating an SOP and standard kit."
-            link="/projects/market-research"
+            link="/testdrive"
             imageSrc={testdrive}
           />
 
           <ProjectCardB
             title="Integrated Marketing Campaign"
             description="The old amusement park wanted to give visitors new reasons to come. Here's a trick: offer some new topics for conversation."
-            link="/projects/market-research"
+            link="/campaign"
             imageSrc={chimelong}
           />
         </StyledGrid>
@@ -173,7 +174,7 @@ const Home = () => {
       <section className='gallery-section'>
         <Grid className='gallery-text'>
           <Column lg={8} md={6} sm={4} className='g-text'>
-            <h1 className='g-headline'>Gallery</h1>
+            <h1 className='g-headline'>Visual Playground</h1>
             <p>
               Welcome to my visual playground - Here, pixels meet polygons, and code brings imagination to life. From smooth 3D shapes to eye-catching computer graphics, each piece shows how creativity and code can work hand in hand.
             </p>

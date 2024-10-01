@@ -8,14 +8,13 @@
 
   display: flex;
   align-content: space-between;
-  // h2 {
-  //   @include type-style('productive-heading-05');
-  //   margin-bottom: $spacing-07;
-  // }
+  h2 {
+    @include type-style('productive-heading-05');
+    margin-bottom: $spacing-07;
+  }
   .capabilities-left {
     display: flex;
     flex-direction: column;
-
   }
 
   .capabilities-right {

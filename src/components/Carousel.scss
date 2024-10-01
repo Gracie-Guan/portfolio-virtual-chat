@@ -9,6 +9,7 @@
   h2 {
     @include type-style('productive-heading-05');
     margin-bottom: $spacing-07;
+    margin-left: $spacing-05;
   }
 
   .journey-grid {
