@@ -57,7 +57,7 @@ function MktResearch() {
               <a href="/">Home</a>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <a href="/work">Work</a>
+              <a href="#/work">Work</a>
             </BreadcrumbItem>
             <BreadcrumbItem isCurrentPage>Market Research</BreadcrumbItem>
           </Breadcrumb>

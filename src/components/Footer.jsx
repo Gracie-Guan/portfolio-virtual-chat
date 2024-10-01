@@ -3,6 +3,7 @@ import { Grid, Column } from '@carbon/react';
 import { LogoLinkedin, Email, LogoGithub } from '@carbon/icons-react';
 import './Footer.scss';
 import logo from '../assets/img/logo_white.svg'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   
@@ -17,23 +18,23 @@ const Footer = () => {
         <Column lg={10} md={4} sm={2}>
           <nav>
             <ul>
-              <li><a href="/about">About</a></li>
-              <li><a href="/work">Work</a></li>
-              <li><a href="/playground">Visual Playground</a></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/work">Work</Link></li>
+              <li><Link to="/playground">Visual Playground</Link></li>
             </ul>
           </nav>
         </Column>
         <Column lg={4} md={2} sm={4}>
           <div className="social-icons">
-            <a href="https://www.linkedin.com/in/gracie-guan" target="_blank" rel="noopener noreferrer">
+            <Link to="https://www.linkedin.com/in/gracie-guan" target="_blank" rel="noopener noreferrer">
               <LogoLinkedin size={20} />
-            </a>
-            <a href="mailto:gracie.yy.guan@gmail.com">
+            </Link>
+            <Link to="mailto:gracie.yy.guan@gmail.com">
               <Email size={20} />
-            </a>
-            <a href="https://github.com/Gracie-Guan/">
+            </Link>
+            <Link to="https://github.com/Gracie-Guan/">
               <LogoGithub size={20} />
-            </a>
+            </Link>
           </div>
           <p className="copyright">
             Website designed and developed with<br />

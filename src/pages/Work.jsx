@@ -12,12 +12,14 @@ import productLaunch from '../assets/img/launch2.jpg';
 import chimelong from '../assets/img/chimelong.jpg';
 import testdrive from '../assets/img/test_drive.png';
 
+import {Link} from 'react-router-dom';
+
 const Work = () => {
   return (
     <div className="work-page">
       <Breadcrumb noTrailingSlash className='work-breadcrumb'>
         <BreadcrumbItem>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </BreadcrumbItem>
         <BreadcrumbItem isCurrentPage>Work</BreadcrumbItem>
       </Breadcrumb>
@@ -34,7 +36,7 @@ const Work = () => {
             title="NOMNOM Mobile App"
             description="A mobile application that addresses common frustrations in finding accurate food information by converting user-uploaded menu photos into accessible, text-based formats using AI."
             imageSrc={nomNomImage}
-            link="/nomnom"
+            link="#/nomnom"
             tags={['UX Design', 'Frontend', 'React Native', 'Google Cloud', 'Gemini AI']}
           />
           <ProjectCardC
@@ -42,7 +44,7 @@ const Work = () => {
             title="TCD Renters Network"
             description="A centralised website to coordinate campaigns around issues faced by the collective student renter community at Trinity College Dublin."
             imageSrc={tcdRentersImage}
-            link="/tcdrenters"
+            link="#/tcdrenters"
             tags={['UX Design', 'Frontend', 'Vue.js']}
           />
         </Grid>
@@ -59,28 +61,28 @@ const Work = () => {
             title="Market Research for R&D"
             description="The company decided to develop a new model of electric scooter, but how to make decision on product specs, price, and market channel?"
             imageSrc={marketResearchImage}
-            link="/research"
+            link="#/research"
             tags={['Market Research']}
           />
           <ProjectCardD
             title="Product Launch"
             description="Start-up ready to launch the brand and product with new concept in a traditional industry, how to steal the spotlight?"
             imageSrc={productLaunch}
-            link="/launch"
+            link="#/launch"
             tags={['Product Marketing']}
           />
           <ProjectCardD
             title="Process Improvement SOP"
             description="What if the people you rely upon to engage users have different backgrounds and skills? Maybe Creating an SOP and standard kit."
             imageSrc={testdrive}
-            link="/testdrive"
+            link="#/testdrive"
             tags={['Process Optimization']}
           />
           <ProjectCardD
             title="Integrated Marketing Campaign"
             description="The old amusement park wanted to give visitors new reasons to come. Here's a trick: offer some new topics for conversation."
             imageSrc={chimelong}
-            link="/campaign"
+            link="#/campaign"
             tags={['Integrated Marketing']}
           />
         </Grid>

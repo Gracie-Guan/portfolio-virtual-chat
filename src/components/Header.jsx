@@ -14,7 +14,7 @@ import {
   SideNav, SideNavItems,
 } from '@carbon/react';
 import { LogoLinkedin, Email, LogoGithub } from '@carbon/react/icons';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 
 function MyHeader() {
 
@@ -37,13 +37,13 @@ function MyHeader() {
           <Header aria-label="Gracie Guan Portfolio">
             <SkipToContent />
             <HeaderMenuButton aria-label={isSideNavExpanded ? 'Close menu' : 'Open menu'} onClick={onClickSideNavExpand} isActive={isSideNavExpanded} aria-expanded={isSideNavExpanded} />
-            <HeaderName href="/" prefix={null}>
+            <HeaderName element={Link} to="/" prefix={null}>
               Gracie Guan
             </HeaderName>
             <HeaderNavigation aria-label="Gracie Guan Portfolio">
-              <HeaderMenuItem href="/about">About</HeaderMenuItem>
-              <HeaderMenuItem href="/work">Work</HeaderMenuItem>
-              <HeaderMenuItem href="/playground">Visual Playground</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/about">About</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/work">Work</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/playground">Visual Playground</HeaderMenuItem>
             </HeaderNavigation>
             <HeaderGlobalBar>
               <HeaderGlobalAction aria-label="Linkedin" onClick={handleLinkedInClick}>

@@ -89,7 +89,7 @@ function MktIntegrated() {
               <a href="/">Home</a>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <a href="/work">Work</a>
+              <a href="#/work">Work</a>
             </BreadcrumbItem>
             <BreadcrumbItem isCurrentPage>Integrated Marketing Campaign</BreadcrumbItem>
           </Breadcrumb>

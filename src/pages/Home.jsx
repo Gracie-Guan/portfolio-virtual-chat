@@ -25,6 +25,8 @@ import gallerypic2 from '../assets/img/visualcomputing1.png';
 import gallerypic3 from '../assets/img/photography/lake.jpg';
 import gallerypic4 from '../assets/img/illustration/myclarins.jpg';
 
+import { Link as RouterLink } from 'react-router-dom';
+
 const StyledGrid = styled(Grid)`
   --cds-grid-gutter: 0; 
 `;
@@ -41,7 +43,7 @@ const Home = () => {
               Connecting the Dots among<br />
               Business, Technology and Design
             </h1>
-            <Link href="/about" className="meet-link">
+            <Link href="#/about" className="meet-link">
               Meet Gracie Guan <ArrowRight size={20} />
             </Link>
           </Column>
@@ -111,7 +113,7 @@ const Home = () => {
             title="NOMNOM"
             description="A mobile application that addresses common frustrations in finding accurate food information by converting user-uploaded menu photos into accessible, text-based formats using AI."
             imageSrc={nomNomImage}
-            link="/nomnom"
+            link="#/nomnom"
             tags={['Mobile App']}
           />
 
@@ -119,7 +121,7 @@ const Home = () => {
             title="TCD Renters Network"
             description="A centralised website to coordinate campaigns around issues faced by the collective student renter community at Trinity College Dublin."
             imageSrc={tcdRenter}
-            link="/tcdrenters"
+            link="#/tcdrenters"
             tags={['Website']}
           />
         </Grid>
@@ -143,28 +145,28 @@ const Home = () => {
           <ProjectCardB
             title="Market Research for R&D"
             description="The company decided to develop a new model of electric scooter, but how to make decision on product specs, price, and market channel?"
-            link="/research"
+            link="#/research"
             imageSrc={marketResearchImage}
           />
 
           <ProjectCardB
             title="Product Launch"
             description="Start-up ready to launch the brand and product with new concept in a traditional industry, how to steal the spotlight?"
-            link="/launch"
+            link="#/launch"
             imageSrc={productLaunch}
           />
 
           <ProjectCardB
             title="Process Improvement SOP"
             description="What if the people you rely upon to engage users have different backgrounds and skills? Maybe Creating an SOP and standard kit."
-            link="/testdrive"
+            link="#/testdrive"
             imageSrc={testdrive}
           />
 
           <ProjectCardB
             title="Integrated Marketing Campaign"
             description="The old amusement park wanted to give visitors new reasons to come. Here's a trick: offer some new topics for conversation."
-            link="/campaign"
+            link="#/campaign"
             imageSrc={chimelong}
           />
         </StyledGrid>
@@ -180,7 +182,7 @@ const Home = () => {
             </p>
           </Column>
           <Column lg={8} md={6} sm={4} className='g-link'>
-            <Link href="/gallery" renderIcon={ArrowRight}>
+            <Link href="#/gallery" renderIcon={ArrowRight}>
               View More
             </Link>
           </Column>

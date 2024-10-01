@@ -72,7 +72,7 @@ function ProductLaunch() {
               <a href="/">Home</a>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <a href="/work">Work</a>
+              <a href="#/work">Work</a>
             </BreadcrumbItem>
             <BreadcrumbItem isCurrentPage>Product Launch</BreadcrumbItem>
           </Breadcrumb>
