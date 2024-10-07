@@ -56,7 +56,7 @@ const Work = () => {
             <h1>Marketing ↷</h1>
           </Column>
         </Grid>
-        <Grid fullWidth>
+        <Grid>
           <ProjectCardD
             title="Market Research for R&D"
             description="The company decided to develop a new model of electric scooter, but how to make decision on product specs, price, and market channel?"
