@@ -96,7 +96,7 @@ const Home = () => {
       <section className='des-dev-project'>
         <Grid className='des-header'>
           <Column lg={8} md={4} sm={4}>
-            <h1> 
+            <h1 className='section-title'> 
               Design and Development Work
             </h1>
           </Column>
@@ -129,7 +129,7 @@ const Home = () => {
       <section className='mkt-project'>
         <Grid className='mkt-header'>
           <Column lg={8} md={4} sm={4}>
-            <h1> 
+            <h1 className='section-title'> 
               Marketing Projects
             </h1>
           </Column>
@@ -156,14 +156,14 @@ const Home = () => {
           />
 
           <ProjectCardB
-            title="Process Improvement SOP"
+            title="Process Improvement"
             description="What if the people you rely upon to engage users have different backgrounds and skills? Maybe Creating an SOP and standard kit."
             link="#/testdrive"
             imageSrc={testdrive}
           />
 
           <ProjectCardB
-            title="Integrated Marketing Campaign"
+            title="Integrated Marketing"
             description="The old amusement park wanted to give visitors new reasons to come. Here's a trick: offer some new topics for conversation."
             link="#/campaign"
             imageSrc={chimelong}
@@ -173,6 +173,7 @@ const Home = () => {
 
       {/*  gallery section */}
       <section className='gallery-section'>
+        <div className='gallery-container'>
         <Grid className='gallery-text'>
           <Column lg={8} md={6} sm={4} className='g-text'>
             <h1 className='g-headline'>Visual Playground</h1>
@@ -201,7 +202,9 @@ const Home = () => {
             <img src={gallerypic1} alt="Gallery item 4" />
           </div>
         </div>
+        </div>
       </section>
+
 
     </div>
   );

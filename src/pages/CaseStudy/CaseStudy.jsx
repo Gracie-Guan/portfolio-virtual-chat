@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Column, Content } from '@carbon/react';
+import { Grid, Column, Content, Button } from '@carbon/react';
 import ProjectOverview from '../../components/Overview';
+
 import MultimediaContent from './MultimediaContent';
 import SidebarNavigation from '../../components/SidebarNavigation';
 import './CaseStudy.scss';
 
 const CaseStudy = ({ projectData, sections }) => {
   const [currentSection, setCurrentSection] = useState(sections[0]?.id);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleNavigation = (sectionId) => {
     setCurrentSection(sectionId);
@@ -39,6 +41,10 @@ const CaseStudy = ({ projectData, sections }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [sections]);
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   const renderContent = (content) => {
     const contentArray = Array.isArray(content) ? content : [content];
 
@@ -65,7 +71,14 @@ const CaseStudy = ({ projectData, sections }) => {
       <ProjectOverview {...projectData} />
       
       <Grid narrow>
-        <Column lg={4} md={2} sm={4} className="sidebar-column">
+        <Column lg={4} md={2} sm={4} className={`sidebar-column ${isSidebarOpen ? 'open' : ''}`}>
+          <Button
+            className="sidebar-toggle"
+            kind="ghost"
+            hasIconOnly
+            iconDescription={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
+            onClick={toggleSidebar}
+          />
           <SidebarNavigation 
             items={sections.map(section => ({
               id: section.id,

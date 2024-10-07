@@ -10,7 +10,7 @@ const StyledColumn = styled(Column)`
 
 const ProjectCardB = ({ title, description, link, imageSrc }) => {
   return (
-    <StyledColumn sm={2} md={4} lg={4} >
+    <StyledColumn sm={4} md={4} lg={4} >
     <ClickableTile
       className="project-card-b"
       href={link}

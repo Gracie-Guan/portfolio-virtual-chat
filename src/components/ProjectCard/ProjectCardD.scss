@@ -1,9 +1,10 @@
+
 @use '@carbon/react/scss/theme' as *;
 @use '@carbon/react/scss/spacing' as *;
 @use '@carbon/react/scss/type' as *;
 @use '@carbon/react/scss/breakpoint' as *;
 
-.project-card {
+.project-card-d {
   margin-bottom: $spacing-07;
 
   &__link {
@@ -13,17 +14,20 @@
     height: 100%;
   }
 
-
   &__content {
     display: flex;
+    flex-direction: column;
     height: 100%;
     background-color: $layer-01;
     position: relative;
     overflow: hidden;
-    justify-content: space-between;
     
-    &:hover{
+    &:hover {
       background-color: $layer-hover-01;
+    }
+
+    @include breakpoint(lg) {
+      flex-direction: row;
     }
   }
   
@@ -31,7 +35,12 @@
     padding: $spacing-05;
     display: flex;
     flex-direction: column;
-    // width: 41.66%;
+    flex-grow: 1;
+    width: 100%;
+
+    @include breakpoint(lg) {
+      width: 50%;
+    }
 
     h3 {
       @include type-style('productive-heading-03');
@@ -41,7 +50,6 @@
     p {
       @include type-style('body-long-01');
       margin-bottom: $spacing-05;
-      text-wrap: wrap;
     }
   }
 
@@ -64,25 +72,29 @@
     }
   }
 
-  &__image-container_d {
-    width: 50%; 
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  &__image-container {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; // 16:9 aspect ratio
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(lg) {
+      width: 50%;
+      padding-top: 28.125%; // Half of 16:9
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
   }
 
   &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover !important;
-  }
-
-  &__icon {
-    position: absolute;
-    left: $spacing-05;
-    bottom: $spacing-05;
-    width: 16px; 
-    height: 16px; 
+    object-fit: cover;
   }
 }

@@ -44,18 +44,22 @@
         flex-direction: row;
         gap: $spacing-07;
 
-        // @include breakpoint(sm) {
-        //   flex-direction: column;
-        //   gap: $spacing-07;
-        // }
+        @include breakpoint-down(md) {
+          flex-direction: column;
+          gap: $spacing-07;
+        }
+      }
+
+      .cvlink {
+        margin-bottom: $spacing-05;
       }
 
       .text-container {
         width: 47.5%;
 
-        // @include breakpoint(sm) {
-        //   width: 100%;
-        // }
+        @include breakpoint-down(md) {
+          width: 100%;
+        }
 
         p {
           @include type-style('body-compact-02');

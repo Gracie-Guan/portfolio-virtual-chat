@@ -7,6 +7,10 @@
   padding: $spacing-05 0;
   margin-bottom: $spacing-07;
 
+  @include breakpoint-down(md) {
+
+  }
+
   .title {
     @include type-style('productive-heading-06');
     color: $link-primary;
@@ -63,10 +67,15 @@
     h3 {
       @include type-style('heading-01');
       margin-bottom: $spacing-02;
+
     }
 
     p {
       @include type-style('body-short-01');
+
+      @include breakpoint-down(md) {
+        @include type-style('label-01');
+      }
     }
   }
 
@@ -93,5 +102,13 @@
     .image-column {
       height: 100%;
     }
+  }
+}
+
+
+.cds--content {
+
+  @include breakpoint-down(md) {
+    padding: $spacing-04 !important;
   }
 }

@@ -8,13 +8,17 @@
   .intro-section {
     padding: $spacing-09 0;
 
-    @include breakpoint(sm) {
-      padding: $spacing-07 0;
+    @include breakpoint-down(md) {
+      padding: $spacing-05 0;
     }
 
     .intro-title {
       @include type-style('productive-heading-07');
       margin-bottom: $spacing-06;
+
+      @include breakpoint-down(md) {
+        @include type-style('productive-heading-06');
+      }
     }
 
     .meet-link {
@@ -23,6 +27,7 @@
       align-items: center;
       color: $link-primary;
       text-decoration: none;
+      margin-bottom: $spacing-07;
 
       svg {
         margin-left: $spacing-03;
@@ -33,8 +38,9 @@
       width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
-
     }
+
+    
   }
 
   .skill-column {
@@ -49,11 +55,20 @@
       }
     }
 
-
     @include breakpoint(lg) {
       &:not(:last-child) {
         border-right: none;
       }
+    }
+  }
+
+  .section-title {
+    @include type-style('productive-heading-06');
+    margin-bottom: $spacing-07;
+
+    @include breakpoint-down(md) {
+      @include type-style('productive-heading-05');
+      margin-bottom: $spacing-05;
     }
   }
 
@@ -101,6 +116,10 @@
   .mkt-project,
   .des-dev-project {
     padding-top: $spacing-06;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .des-header {
@@ -109,6 +128,8 @@
 
   .des-cards {
     margin: $spacing-09 0;
+
+    
   }
 
 }
@@ -117,6 +138,17 @@
 .gallery-section {
   margin-bottom: $spacing-09;
   padding-top: $spacing-09;
+}
+
+.gallery-container {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 0 $spacing-05;
+
+  @include breakpoint-down(md) {
+    padding: 0;
+  }
+
 }
 
 .gallery-text {

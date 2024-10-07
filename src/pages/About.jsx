@@ -32,7 +32,7 @@ function About() {
                 Hi, I'm<br />
                 Gracie Guan
               </h1>
-              <Link href={cv} renderIcon={() => <ArrowRight aria-label="Arrow Right" />}>
+              <Link href={cv} renderIcon={() => <ArrowRight aria-label="Arrow Right" />} className='cvlink'>
                 Download My CV
               </Link>
               </div>

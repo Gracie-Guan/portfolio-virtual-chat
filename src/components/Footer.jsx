@@ -6,33 +6,40 @@ import logo from '../assets/img/logo_white.svg'
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  
+  const handleScrollToTop = (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <footer className="custom-footer">
       <Grid className="custom-grid" narrow>
         <Column lg={2} md={2} sm={2}>
-          <div>
-            <img className="logo" src={logo} alt='Gracie logo' height={100}/>
-          </div>
+          <Link to="/" onClick={handleScrollToTop}>
+            <img  className="logo" src={logo} alt='Gracie logo' height={100}/>
+          </Link>
         </Column>
-        <Column lg={10} md={4} sm={2}>
+        <Column lg={10} md={4} sm={2} className="nav-column">
           <nav>
             <ul>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/work">Work</Link></li>
-              <li><Link to="/playground">Visual Playground</Link></li>
+              <li><Link to="/about" aria-label="About page">About</Link></li>
+              <li><Link to="/work" aria-label="Work page">Work</Link></li>
+              <li><Link to="/playground" aria-label="visual playground page">Playground</Link></li>
             </ul>
           </nav>
         </Column>
-        <Column lg={4} md={2} sm={4}>
+        <Column lg={4} md={2} sm={4} className="social-column">
           <div className="social-icons">
-            <Link to="https://www.linkedin.com/in/gracie-guan" target="_blank" rel="noopener noreferrer">
+            <Link to="https://www.linkedin.com/in/gracie-guan" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
               <LogoLinkedin size={20} />
             </Link>
-            <Link to="mailto:gracie.yy.guan@gmail.com">
+            <Link to="mailto:gracie.yy.guan@gmail.com" aria-label="email">
               <Email size={20} />
             </Link>
-            <Link to="https://github.com/Gracie-Guan/">
+            <Link to="https://github.com/Gracie-Guan/" aria-label="github">
               <LogoGithub size={20} />
             </Link>
           </div>
