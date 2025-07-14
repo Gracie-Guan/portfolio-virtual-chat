@@ -1,7 +1,6 @@
 # Python / backend 忽略项
 backend/__pycache__/
 backend/.env
-backend/faiss_index/
 *.pyc
 
 # Node / frontend 忽略项
