@@ -8,17 +8,16 @@ You can also book a real chat with me through the integrated calendly section if
 
 ## 🛠️ Tech Stack
 **Frontend:**
-- React (with functional components and hooks)
-- SCSS (responsive, modern UI)
+- React 
+- SCSS 
 - IBM Carbon Design System
-- React Router
+
 
 **Backend:**
-- FastAPI (Python)
+- FastAPI 
 - LangChain (RAG pipeline)
 - OpenAI API (LLM, embeddings)
-- FAISS (vector database)
-- dotenv (secure API key management)
+- FAISS 
 
 ## ✨ Highlights
 - **AI Chatbot**: Ask anything about me. My experience, skills, projects or fun facts. The AI only answers based on real, context-rich data from my portfolio.

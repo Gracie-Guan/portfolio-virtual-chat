@@ -13,13 +13,32 @@ import MktResearch from './pages/CaseStudy/csMkt01';
 import ProductLaunch from './pages/CaseStudy/csMkt02';
 import TestDrive from './pages/CaseStudy/csMkt03';     
 import MktIntegrated from './pages/CaseStudy/csMkt04'; 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className='App'>
       <MyHeader />
         <Content>
           {/* <Router> */}
+            <ScrollToTop />
             <Routes>
                 <Route path='/' element={<Home />}  />
                 <Route path='/chat' element={<Chat />}  />
