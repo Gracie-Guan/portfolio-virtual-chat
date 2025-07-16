@@ -76,7 +76,7 @@ Please response according to your role and the provided context in a conversatio
 VECTOR_DB_PATH = "faiss_index" 
 
 embeddings = OpenAIEmbeddings()
-vectorstore = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=True)
+vectorstore = FAISS.load_local("faiss_index", embeddings)
 retriever = vectorstore.as_retriever()
 
 

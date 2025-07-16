@@ -1,8 +1,8 @@
-// Determine environment and API URL
-const isDevelopment = process.env.NODE_ENV === 'development';
-const API_URL = isDevelopment
-  ? 'http://localhost:8000/chat'
-  : 'https://your-api-domain.com/chat'; // TODO: Replace with actual production URL
+// 优先使用环境变量，便于灵活切换
+const API_URL = process.env.REACT_APP_API_URL ||
+  (process.env.NODE_ENV === 'development'
+    ? 'http://localhost:8000'
+    : 'https://gracie-virtual-chat.onrender.com');
 
 // Initialize session ID once per session
 let sessionId = crypto.randomUUID();
@@ -10,7 +10,7 @@ let sessionId = crypto.randomUUID();
 const chatbotService = {
   async generateResponse(userInput) {
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(`${API_URL}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
